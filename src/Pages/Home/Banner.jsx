@@ -10,19 +10,51 @@ const Banner = () => {
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={banner1} className="w-full" />
                 <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.5)]">
+                    <a href="#slide4" className=" text-4xl pl-4">❮</a>
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
                         <h2 className='text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
                         <p className='w-3/4 mx-auto'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
                         <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
                     </div>
-
-                </div>
-                <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-                    <a href="#slide4" className="btn btn-circle mr-4">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+                    <a href="#slide2" className="text-4xl pe-4">❯</a>
                 </div>
             </div>
-
+            <div id="slide2" className="carousel-item relative w-full">
+                <img src={banner2} className="w-full" />
+                <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.5)]">
+                    <a href="#slide1" className=" text-4xl pl-4">❮</a>
+                    <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
+                        <h2 className='text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
+                        <p className='w-3/4 mx-auto'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
+                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                    </div>
+                    <a href="#slide3" className="text-4xl pe-4">❯</a>
+                </div>
+            </div>
+            <div id="slide3" className="carousel-item relative w-full">
+                <img src={banner3} className="w-full" />
+                <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.5)]">
+                    <a href="#slide2" className=" text-4xl pl-4">❮</a>
+                    <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
+                        <h2 className='text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
+                        <p className='w-3/4 mx-auto'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
+                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                    </div>
+                    <a href="#slide4" className="text-4xl pe-4">❯</a>
+                </div>
+            </div>
+            <div id="slide4" className="carousel-item relative w-full">
+                <img src={banner1} className="w-full" />
+                <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.5)]">
+                    <a href="#slide3" className=" text-4xl pl-4">❮</a>
+                    <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
+                        <h2 className='text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
+                        <p className='w-3/4 mx-auto'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
+                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                    </div>
+                    <a href="#slide1" className="text-4xl pe-4">❯</a>
+                </div>
+            </div>
         </div>
     );
 };
