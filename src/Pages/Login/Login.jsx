@@ -2,6 +2,7 @@ import React from 'react';
 import Lottie from "lottie-react";
 import reader from "../../../public/login.json";
 import { Link } from 'react-router-dom';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     return (
@@ -23,14 +24,14 @@ const Login = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="text" placeholder="password" className="input input-bordered" />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <p className='text-center pt-4'>Don't have an account? <Link to='/register' className='text-primary'>Register</Link></p>
+
+                            <button className="btn btn-primary btn-sm  mt-3  rounded-none border-0 text-black w-3/4 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500"> <FaGoogle className='mr-3 text-center'/> Sign In with Google</button>
+                            
                         </div>
                     </div>
                     <div className="text-center lg:text-left w-2/4">
