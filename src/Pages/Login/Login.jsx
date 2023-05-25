@@ -4,9 +4,10 @@ import reader from "../../../public/login.json";
 import { Link } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
-    const {signinUser } = useContext(AuthContext);
+    const { signinUser } = useContext(AuthContext);
 
     const handleSignIn = event => {
         event.preventDefault()
@@ -15,16 +16,16 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-        if(email, password)
-        signinUser(email, password)
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser)
-            alert('successfully login')
-        })
-        .catch(error =>{
-            console.log(error.message)
-        })
+        if (email, password)
+            signinUser(email, password)
+                .then(result => {
+                    const loggedUser = result.user;
+                    console.log(loggedUser)
+                    alert('successfully login')
+                })
+                .catch(error => {
+                    console.log(error.message)
+                })
     }
     return (
         <div>
@@ -52,8 +53,9 @@ const Login = () => {
                                 </div>
                                 <p className='text-center pt-4'>Don't have an account? <Link to='/register' className='text-primary'>Register</Link></p>
 
-                                <button className="btn btn-primary btn-sm  mt-3  rounded-none border-0 text-black w-3/4 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500"> <FaGoogle className='mr-3 text-center' /> Sign In with Google</button>
-
+                                <div className='text-center'>
+                                    <SocialLogin></SocialLogin>
+                                </div>
                             </div>
                         </form>
                     </div>

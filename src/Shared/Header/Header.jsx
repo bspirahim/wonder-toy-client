@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Header = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -22,7 +23,7 @@ const Header = () => {
     const handleSignOut = () => {
         signOutUser()
             .then(() => {
-                alert('logged out user')
+                toast.success('Logged Out')
             })
             .catch(error => {
                 console.log(error)

@@ -4,6 +4,7 @@ import reader from "../../../public/login.json";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
@@ -71,6 +72,9 @@ const Register = () => {
                                     <button className="btn btn-primary">Sign Up</button>
                                 </div>
                                 <p className='text-center pt-4'>Already have an account? <Link to='/login' className='text-primary'>Login</Link></p>
+                                <div className='text-center'>
+                                    <SocialLogin></SocialLogin>
+                                </div>
                             </div>
                         </form>
                     </div>
