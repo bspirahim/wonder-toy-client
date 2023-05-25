@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
+    const { user, signOutUser } = useContext(AuthContext);
     const navItems = <>
         <li><Link to='/'>Home</Link> </li>
         <li><Link to='alltoys'>All Toys</Link> </li>
-        <li><Link to='mytoys'>My Toys</Link> </li>
-        <li><Link to='addtoy'>Add A Toy</Link> </li>
         <li><Link to='blog'>Blog</Link> </li>
+        {
+            user ? <>
+                <li><Link to='mytoys'>My Toys</Link> </li>
+                <li><Link to='addtoy'>Add A Toy</Link> </li>
+            </>
+                : ''
+
+        }
 
     </>
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                alert('logged out user')
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
     return (
         <div className="md:px-20 navbar bg-base-100">
             <div className="navbar-start">
@@ -32,9 +50,17 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='login'>
-                    <button className="btn btn-outline btn-primary px-5">Login</button>
-                </Link>
+                {
+                    user ?
+                        <>
+                            <img src="/public/photoGallery/profile.png" className='w-12 mr-4' alt="" />
+                            <button onClick={handleSignOut} className="btn btn-outline btn-primary px-5">Logout</button>
+                        </>
+                        :
+                        <Link to='login'>
+                            <button className="btn btn-outline btn-primary px-5">Login</button>
+                        </Link>
+                }
             </div>
         </div>
     );
