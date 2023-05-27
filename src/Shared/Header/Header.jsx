@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 
 const Header = () => {
     const { user, signOutUser } = useContext(AuthContext);
+    console.log(user)
     const navItems = <>
         <li><Link to='/'>Home</Link> </li>
         <li><Link to='alltoys'>All Toys</Link> </li>
@@ -30,7 +31,7 @@ const Header = () => {
             })
     }
     return (
-        <div className="md:px-20 navbar bg-base-100">
+        <div className="md:px-20 navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,8 +55,15 @@ const Header = () => {
                 {
                     user ?
                         <>
-                            <img src="/public/photoGallery/profile.png" className='w-12 mr-4' alt="" />
-                            <button onClick={handleSignOut} className="btn btn-outline btn-primary px-5">Logout</button>
+
+                            <div className='flex items-center'>
+                                <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                    <img src={user?.photoURL} className='w-12 mr-4 rounded-full' alt="" />
+                                </div>
+
+                                <button onClick={handleSignOut} className="btn btn-outline btn-primary px-5">Logout</button>
+                            </div>
+
                         </>
                         :
                         <Link to='login'>
