@@ -7,10 +7,12 @@ const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState({});
+    const [loading, setLoading] = useState(true)
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, 
             (loggedInUser)=>{
                 setUser(loggedInUser)
+                setLoading(false)
             });
             return ()=>{
                 unSubscribe();
@@ -30,15 +32,16 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
 
-    const updateUser = (name, photoUrl) =>{
-        return updateProfile(auth, currentUser, {
-            displayName:name, photoUrl:photoUrl
+    const updateUser = (name, photoURL) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photoURL
         });
     }
 
 
     const authInfo = {
         user,
+        loading,
         createUser,
         signinUser,
         signOutUser,

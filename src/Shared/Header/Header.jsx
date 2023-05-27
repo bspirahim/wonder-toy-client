@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 
 const Header = () => {
     const { user, signOutUser } = useContext(AuthContext);
-    console.log(user)
     const navItems = <>
         <li><Link to='/'>Home</Link> </li>
         <li><Link to='alltoys'>All Toys</Link> </li>
@@ -27,7 +26,7 @@ const Header = () => {
                 toast.success('Logged Out')
             })
             .catch(error => {
-                console.log(error)
+                toast.error(error.message)
             })
     }
     return (
@@ -58,7 +57,7 @@ const Header = () => {
 
                             <div className='flex items-center'>
                                 <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                    <img src={user?.photoURL} className='w-12 mr-4 rounded-full' alt="" />
+                                    <img src={user?.photoURL ? user.photoURL : "/public/photoGallery/profile.png"} className='w-12 mr-4 rounded-full' alt="" />
                                 </div>
 
                                 <button onClick={handleSignOut} className="btn btn-outline btn-primary px-5">Logout</button>

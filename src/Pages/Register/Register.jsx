@@ -1,13 +1,19 @@
 import React, { useContext, useState } from 'react';
 import Lottie from "lottie-react";
 import reader from "../../../public/login.json";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
+    const [error, setError] = useState('')
+
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleSignUp = event => {
         event.preventDefault()
@@ -18,17 +24,27 @@ const Register = () => {
         const photo = form.photo.value;
 
         console.log(name, email, password, photo)
+        if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password)) {
+            setError('Minimum eight characters, at least one uppercase letter, one lowercase letter and one number')
+            return;
+        }
 
         if ((name, email, password, photo)) {
 
             createUser(email, password)
                 .then(result => {
                     const createdUser = result.user;
-                    console.log(createdUser);
-                    alert('Successfully added user')
+                    updateUser(name, photo).then(() => {
+                        form.reset();
+                    })
+                    .catch(error => { toast.error(error.message); });
+                    toast.success('Successfully Registerd')
+                    navigate(from, { replace: true })
+
+
                 })
                 .catch(error => {
-                    console.log(error);
+                    toast.error(error.message)
                 })
         }
 
@@ -70,10 +86,11 @@ const Register = () => {
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Sign Up</button>
+                                    <p className='text-red-500'>{error}</p>
                                 </div>
                                 <p className='text-center pt-4'>Already have an account? <Link to='/login' className='text-primary'>Login</Link></p>
                                 <div className='text-center'>
-                                    <SocialLogin></SocialLogin>
+                                    <SocialLogin from={from}></SocialLogin>
                                 </div>
                             </div>
                         </form>

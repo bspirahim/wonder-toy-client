@@ -3,9 +3,11 @@ import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
-const SocialLogin = () => {
+const SocialLogin = ({from}) => {
     const auth = getAuth(app)
+    const navigate = useNavigate()
 
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () =>{
@@ -14,6 +16,7 @@ const SocialLogin = () => {
             const user = result.user
             console.log(user)
             toast.success('logged in');
+            navigate(from, { replace: true })
         })
         .catch(error =>{
             console.log(error)

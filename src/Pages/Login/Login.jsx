@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
 import Lottie from "lottie-react";
 import reader from "../../../public/login.json";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const { signinUser } = useContext(AuthContext);
+
+    const location = useLocation()
+    const navigate = useNavigate()
+    const from = location.state?.from?.pathname || '/'
 
     const handleSignIn = event => {
         event.preventDefault()
@@ -20,11 +25,12 @@ const Login = () => {
             signinUser(email, password)
                 .then(result => {
                     const loggedUser = result.user;
-                    console.log(loggedUser)
-                    alert('successfully login')
+                    toast.success('successfully login')
+                    form.reset()
+                    navigate(from, {replace:true})
                 })
                 .catch(error => {
-                    console.log(error.message)
+                    toast.error(error.message)
                 })
     }
     return (
@@ -54,7 +60,7 @@ const Login = () => {
                                 <p className='text-center pt-4'>Don't have an account? <Link to='/register' className='text-primary'>Register</Link></p>
 
                                 <div className='text-center'>
-                                    <SocialLogin></SocialLogin>
+                                    <SocialLogin from={from}></SocialLogin>
                                 </div>
                             </div>
                         </form>
