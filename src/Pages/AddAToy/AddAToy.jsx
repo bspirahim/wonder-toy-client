@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AddAToy = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleAddAToy = event => {
         event.preventDefault()
-        
+
         const form = event.target;
         const sellerName = form.sellerName.value;
         const email = form.email.value;
@@ -15,29 +16,41 @@ const AddAToy = () => {
         const price = form.price.value;
         const quantity = form.quantity.value;
         const details = form.comment.value;
+        const img = form.photo.value;
 
-        const addToy ={
+        const addToy = {
             SellerName: sellerName,
             email,
             ProductName: productName,
             Category: Category,
             Price: price,
             Quantity: quantity,
-            details
+            details,
+            img
         }
         console.log(addToy);
 
         fetch('http://localhost:5000/alltoys', {
-            method:'POST',
-            headers:{
-                'content-type' : 'application/json'
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
             },
             body: JSON.stringify(addToy)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Successfully added',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                    form.reset();
+                }
+            })
     }
 
 
@@ -51,7 +64,7 @@ const AddAToy = () => {
                         <label className="label">
                             <span className="label-text">Seller Name</span>
                         </label>
-                        <input  type="text" defaultValue={user?.displayName} name='sellerName' className="input input-bordered " required />
+                        <input type="text" defaultValue={user?.displayName} name='sellerName' className="input input-bordered " required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -81,19 +94,19 @@ const AddAToy = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <input type="text" name='price' className="input input-bordered" required />
-                    </div> 
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Available Quantity</span>
                         </label>
                         <input type="text" name='quantity' className="input input-bordered" required />
-                    </div> 
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>
                         <input type="text" name='rating' className="input input-bordered" required />
-                    </div> 
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo</span>
@@ -102,11 +115,11 @@ const AddAToy = () => {
                     </div>
                 </div>
                 <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Detail Description</span>
-                        </label>
-                        <textarea type="text" name='comment' className="input input-bordered" required />
-                    </div>
+                    <label className="label">
+                        <span className="label-text">Detail Description</span>
+                    </label>
+                    <textarea type="text" name='comment' className="input input-bordered" required />
+                </div>
                 <div className="form-control mt-6">
                     <input type="submit" className='btn btn-primary' value="Add Toy" />
                 </div>

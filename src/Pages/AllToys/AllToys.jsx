@@ -4,6 +4,9 @@ import AllToysTable from './AllToysTable';
 
 const AllToys = () => {
     const toys = useLoaderData();
+    console.log(toys)
+
+    
     return (
         <div className='md:px-20'>
             <div className="relative w-full">
@@ -26,11 +29,13 @@ const AllToys = () => {
                                     <input type="checkbox" className="checkbox" />
                                 </label>
                             </th>
+                            <th>Toy Photo</th>
                             <th>Seller Name</th>
                             <th>Toy Name</th>
                             <th>Sub-Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
 
