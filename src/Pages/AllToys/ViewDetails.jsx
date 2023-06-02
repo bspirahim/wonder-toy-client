@@ -18,17 +18,17 @@ const ViewDetails = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className='md:px-20 my-12 mx-auto'>
                 <div className="card lg:card-side bg-base-200 shadow-lg">
-                    <figure><img src={img} style={{ width: '400px' }} alt="Album" /></figure>
+                    <figure><img src={img} style={{ width: '400px' }} className='ml-7 rounded-lg' alt="Album" /></figure>
                     <div className="card-body lg:w-2/4">
-                        <h2 className="card-title">Seller Name: {SellerName}</h2>
-                        <p>Seller Email: {email} </p>
-                        <p>Category: {Category} </p>
-                        <p>Price: {Price} </p>
-                        <p>Available: {Quantity} </p>
-                        <p>Details: {details} </p>
+                        <p><span className='font-bold'>Seller Name</span>: {SellerName} </p>
+                        <p><span className='font-bold'>Seller Email</span>: {email} </p>
+                        <p><span className='font-bold'>Category: </span>: {Category} </p>
+                        <p><span className='font-bold'>Available Quantity: </span>: {Quantity} </p>
+                        <p><span className='font-bold'>Price: </span>: {Price} </p>
+                        <p><span className='font-bold'>Details: </span>: {details} </p>
                     </div>
                 </div>
             </div>

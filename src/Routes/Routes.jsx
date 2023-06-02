@@ -13,44 +13,46 @@ import ViewDetails from "../Pages/AllToys/ViewDetails";
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Main></Main>,
-        children:[
+        path: '/',
+        element: <Main></Main>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/alltoys',
-                element:<AllToys></AllToys>,
-                loader:()=> fetch('http://localhost:5000/altoys')
+                path: '/alltoys',
+                element: <AllToys></AllToys>,
+                loader: () => fetch('http://localhost:5000/altoys')
             },
             {
-                path:'toy/:id',
-                element:<ViewDetails></ViewDetails>,
-                loader:({params}) => fetch(`http://localhost:5000/altoys/${params.id}`)
+                path: 'toy/:id',
+                element: <PrivateRoute>
+                    <ViewDetails></ViewDetails>
+                </PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/altoys/${params.id}`)
             },
             {
-                path:'/mytoys',
-                element:<PrivateRoute>
+                path: '/mytoys',
+                element: <PrivateRoute>
                     <MyToys></MyToys>
                 </PrivateRoute>
             },
             {
-                path:'/addtoy',
-                element:<AddAToy></AddAToy>
+                path: '/addtoy',
+                element: <AddAToy></AddAToy>
             },
             {
-                path:'/blog',
-                element:<Blog></Blog>
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     }
