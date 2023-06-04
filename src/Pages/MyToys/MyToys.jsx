@@ -61,6 +61,7 @@ const MyToys = () => {
                             <th>Sub-Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
+                            <th>Update Toy</th>
                         </tr>
                     </thead>
 
