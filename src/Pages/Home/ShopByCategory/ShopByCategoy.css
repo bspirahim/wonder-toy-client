@@ -1,0 +1,16 @@
+
+
+.react-tabs__tab {
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1;
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+  }
+
+  .react-tabs__tab--selected {
+    border-bottom: 2px solid #1F6CB0;
+  }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from './Banner';
 import PhotoGallery from './PhotoGallery';
-import ShopByCategory from './ShopByCategory';
+import ShopByCategory from './ShopByCategory/ShopByCategory';
+
 
 
 const Home = () => {

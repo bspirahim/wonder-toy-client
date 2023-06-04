@@ -11,20 +11,20 @@ const AddAToy = () => {
         const form = event.target;
         const sellerName = form.sellerName.value;
         const email = form.email.value;
-        const productName = form.productName.value;
-        const Category = form.category.value;
+        const toyName = form.toyName.value;
+        const category = form.category.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
         const details = form.comment.value;
         const img = form.photo.value;
 
         const addToy = {
-            SellerName: sellerName,
+            sellerName: sellerName,
             email,
-            ProductName: productName,
-            Category: Category,
-            Price: price,
-            Quantity: quantity,
+            toyName: toyName,
+            category: category,
+            price: price,
+            quantity: quantity,
             details,
             img
         }
@@ -74,9 +74,9 @@ const AddAToy = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Product Name</span>
+                            <span className="label-text">Toy Name</span>
                         </label>
-                        <input type="text" name='productName' className="input input-bordered" required />
+                        <input type="text" name='toyName' className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
