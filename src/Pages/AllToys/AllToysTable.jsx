@@ -29,7 +29,7 @@ const AllToysTable = ({ toy }) => {
                 <td>{category}</td>
                 <td>{price}</td>
                 <td>{quantity}</td>
-                <td> <Link to={`/toy/${_id}`}><button className='btn btn-primary'>View Details</button></Link> </td>
+                <td> <Link to={`/toy/${_id}`}><button className='btn btn-primary btn-sm'>View Details</button></Link> </td>
             </tr>
         </tbody>
     );

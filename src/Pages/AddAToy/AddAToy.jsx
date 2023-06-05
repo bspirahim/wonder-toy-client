@@ -15,7 +15,8 @@ const AddAToy = () => {
         const category = form.category.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
-        const details = form.comment.value;
+        const details = form.details.value;
+        const rating = form.rating.value;
         const img = form.photo.value;
 
         const addToy = {
@@ -26,6 +27,7 @@ const AddAToy = () => {
             price: price,
             quantity: quantity,
             details,
+            rating,
             img
         }
         console.log(addToy);
@@ -118,7 +120,7 @@ const AddAToy = () => {
                     <label className="label">
                         <span className="label-text">Detail Description</span>
                     </label>
-                    <textarea type="text" name='comment' className="input input-bordered" required />
+                    <textarea type="text" name='details' className="input input-bordered" required />
                 </div>
                 <div className="form-control mt-6">
                     <input type="submit" className='btn btn-primary' value="Add Toy" />
