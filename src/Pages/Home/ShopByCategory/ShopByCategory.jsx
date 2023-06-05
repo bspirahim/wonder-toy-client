@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './ShopByCategoy.css'
 import Reborn from './Reborn/Reborn';
+import { Link } from 'react-router-dom';
 
 const ShopByCategory = () => {
     const [category, setCategory] = useState([])
@@ -27,6 +28,7 @@ const ShopByCategory = () => {
                         {
                             category.map(ethnic =>
 
+
                                 <div className="card w-auto bg-base-100 shadow-xl">
                                     <figure><img src={ethnic.img} className='w-full h-48 object-cover' alt="Shoes" /></figure>
                                     <div className="card-body">
@@ -34,7 +36,7 @@ const ShopByCategory = () => {
                                         <p>Price: {ethnic.price}</p>
                                         <p>Rating: {ethnic.rating}</p>
                                         <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">View Details</button>
+                                            <Link to={`/toy/${ethnic._id}`}><button className='btn btn-primary'>View Details</button></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +59,7 @@ const ShopByCategory = () => {
                                         <p>Price: {reborn.price}</p>
                                         <p>Rating: {reborn.rating}</p>
                                         <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">View Details</button>
+                                            <Link to={`/toy/${reborn._id}`}><button className='btn btn-primary'>View Details</button></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +80,7 @@ const ShopByCategory = () => {
                                         <p>Price: {baby.price}</p>
                                         <p>Rating: {baby.rating}</p>
                                         <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">View Details</button>
+                                            <Link to={`/toy/${baby._id}`}><button className='btn btn-primary'>View Details</button></Link>
                                         </div>
                                     </div>
                                 </div>
