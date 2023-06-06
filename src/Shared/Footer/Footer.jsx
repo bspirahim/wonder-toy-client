@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='md:px-20 bg-[#22386D] h-60 text-base-200 '>
-            <div className='flex justify-between py-3 relative'>
+        <div className='md:px-20 bg-[#22386D] h-72 text-base-200 '>
+            <div className='flex justify-between py-8 relative'>
                 <div>
                     <small>We offer a premium service <br /> wheather you are shoping at one of our <br /> flagship stores or via our website!</small>
                     <p className='pt-2'>Kajipara Mirpur, Dhaka 1207</p>
@@ -22,11 +22,14 @@ const Footer = () => {
                     
                 </div>
                 <div className=''>
-                    <button className='btn btn-primary btn-sm absolute bottom-3 end-0'>Contact & Service</button>
+                    <button className='btn btn-primary btn-sm absolute bottom-10 end-0'>Contact & Service</button>
                 </div>
             </div>
+
             <hr className='border-1 border-indigo-200'/>
-            <div className='flex justify-between items-center py-3'>
+
+
+            <div className='flex justify-between items-center pt-10'>
                 <div className='flex'>
                     <p className='px-1 text-3xl'><FaFacebookF></FaFacebookF></p>
                     <p className='px-1 text-3xl'><FaYoutube></FaYoutube></p>

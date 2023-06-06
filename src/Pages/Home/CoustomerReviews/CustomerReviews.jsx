@@ -1,5 +1,4 @@
-import React from 'react';
-import Marquee from 'react-fast-marquee';
+import React from 'react'
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 
