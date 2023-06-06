@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './ShopByCategoy.css'
-import Reborn from './Reborn/Reborn';
 import { Link } from 'react-router-dom';
 
 const ShopByCategory = () => {
@@ -14,9 +13,15 @@ const ShopByCategory = () => {
     }
     console.log(category)
 
+    useEffect(() =>{
+        fetch('http://localhost:5000/altoys?category=ethnic')
+            .then(res => res.json())
+            .then(data => setCategory(data))
+    },[])
 
     return (
         <div className='md:px-20 my-20'>
+            <h2 className='text-3xl text-center mb-12 font-bold'>Shop By Category</h2>
             <Tabs className="Tabs">
                 <TabList className='w-2/4 mx-auto flex justify-around'>
                     <Tab onClick={() => handleCategory('ethnic')}>Ethnic Dolls</Tab>

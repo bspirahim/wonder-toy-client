@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagramSquare, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagramSquare, FaPhoneAlt, FaTwitter, FaYoutube, FaMailBulk } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -13,14 +13,19 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <span><FaPhoneAlt></FaPhoneAlt>01716289767</span>
-                    <FaPhoneAlt></FaPhoneAlt>01716289767
+                    <span className='flex items-center'><FaPhoneAlt className='me-2'></FaPhoneAlt>01716289767</span>
+
+                    <span className='flex items-center'><FaPhoneAlt className='me-2'></FaPhoneAlt>telephone- 091500000</span>
+
+                    <span className='flex items-center'><FaMailBulk className='me-2'></FaMailBulk>bspirahim@gmail.com</span>
+                    <span className='flex items-center'><FaMailBulk className='me-2'></FaMailBulk>bspirahim@gmail.com</span>
+                    
                 </div>
                 <div className=''>
                     <button className='btn btn-primary btn-sm absolute bottom-3 end-0'>Contact & Service</button>
                 </div>
             </div>
-            <hr />
+            <hr className='border-1 border-indigo-200'/>
             <div className='flex justify-between items-center py-3'>
                 <div className='flex'>
                     <p className='px-1 text-3xl'><FaFacebookF></FaFacebookF></p>
@@ -35,7 +40,7 @@ const Footer = () => {
                     <Link className='mx-2 text-lg border-b-2' to='blog'>blog</Link>
                     <Link className='mx-2 text-lg border-b-2' to='addtoy'>Add Toy</Link>
                 </div>
-                <div className='bg-blue-300 p-1'>
+                <div className=' p-1 rounded-lg'>
                     <img className='h-[50px]' src="/public/wonder-toy-logo.png" alt="" />
                 </div>
             </div>
