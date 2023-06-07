@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import MyToysTable from './MyToysTable';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
     useTitle('My Toys')
@@ -18,24 +19,37 @@ const MyToys = () => {
 
 
 
-    const handleDelete = id => {
-        const proceed = confirm('Are you sure you want to delete it');
-        if (proceed) {
-            fetch(`http://localhost:5000/altoys/${id}`, {
-                method: 'DELETE',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if (data.deletedCount > 0) {
-                        const remaining = myToys.filter(myToy => myToy._id !== id);
-                        setMyToys(remaining);
-                    }
-                }
-                );
 
-        }
-    }
+    const handleDelete = _id => {
+      console.log(_id)
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+  
+            fetch(`http://localhost:5000/altoys/${_id}`, {
+              method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+              console.log(data);
+               Swal.fire(
+              'Deleted!',
+              'Your coffee has been deleted.',
+              'success',
+              )
+              const remaining = myToys.filter(toys => toys._id !== _id);
+              setMyToys(remaining);
+              })
+          }
+        })
+  }
 
     return (
         <div className='md:px-20'>

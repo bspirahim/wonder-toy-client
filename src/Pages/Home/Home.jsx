@@ -5,7 +5,7 @@ import ShopByCategory from './ShopByCategory/ShopByCategory';
 import CustomerReviews from './CoustomerReviews/CustomerReviews';
 import NewsLetter from './NewsLetter/NewsLetter';
 import Aos from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import useTitle from '../../hooks/useTitle';
 
