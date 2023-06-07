@@ -5,8 +5,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
+    useTitle('Register')
     const { createUser, updateUser } = useContext(AuthContext);
     const [error, setError] = useState('')
 

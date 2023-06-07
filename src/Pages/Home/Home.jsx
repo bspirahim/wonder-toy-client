@@ -7,10 +7,12 @@ import NewsLetter from './NewsLetter/NewsLetter';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
+import useTitle from '../../hooks/useTitle';
 
 
 
 const Home = () => {
+    useTitle('Home');
 
     useEffect(()=>{
         Aos.init({
