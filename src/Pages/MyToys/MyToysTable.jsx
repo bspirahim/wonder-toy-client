@@ -28,7 +28,7 @@ const MyToysTable = ({ toy, handleDelete }) => {
                 <td>{category}</td>
                 <td>{price}</td>
                 <td>{quantity}</td>
-                <td> <Link to={`/updatetoy/${_id}`}><button className='btn btn-sm'>Edit</button></Link> </td>
+                <td> <Link to={`/updatetoy/${_id}`}><button className='btn btn-primary btn-sm'>Edit</button></Link> </td>
             </tr>
         </tbody>
     );

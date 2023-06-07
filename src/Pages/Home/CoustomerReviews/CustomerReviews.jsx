@@ -5,7 +5,7 @@ import Rating from 'react-rating';
 
 const CustomerReviews = () => {
     return (
-        <div className='md:px-20 my-10'>
+        <div data-aos="fade-up" className='md:px-20 my-10'>
             <p className='text-3xl text-center font-bold'>Customer's Review</p>
                 <div className='md:grid grid-cols-4 gap-4 mt-20'>
                     <div className="card w-60 bg-indigo-100 border-double border-4 border-sky-500 text-center p-4">

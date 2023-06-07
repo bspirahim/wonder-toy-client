@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './ShopByCategoy.css'
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
 
 const ShopByCategory = () => {
+
     const [category, setCategory] = useState([])
 
     const handleCategory = (category) => {
@@ -20,7 +22,7 @@ const ShopByCategory = () => {
     },[])
 
     return (
-        <div className='md:px-20 my-20'>
+        <div data-aos="fade-up" className='md:px-20 my-20'>
             <h2 className='text-3xl text-center mb-12 font-bold'>Shop By Category</h2>
             <Tabs className="Tabs">
                 <TabList className='w-2/4 mx-auto flex justify-around'>

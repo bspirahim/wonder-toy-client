@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const PhotoGallery = () => {
+    useEffect(()=>{
+        Aos.init({
+            offset: 200,
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+          });
+    },[])
     return (
-        <div className='md:px-20'>
+        <div data-aos="fade-up" className='md:px-20'>
             <h1 className='text-4xl font-bold text-center my-10'>Photo Gallery</h1>
             <div class="grid-cols-3 px-10 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
                 <div class="...">

@@ -1,8 +1,9 @@
 import React from 'react';
+import Aos from 'aos';
 
 const NewsLetter = () => {
     return (
-        <div className='md:px-20 my-20'>
+        <div data-aos="fade-up" className='md:px-20 my-20'>
             <div className=" relative w-full">
                 <img src='/public/banner/bg-3.jpg' className="w-full rounded-lg" />
                 <div className="absolute rounded-xl  h-full flex items-center left-0 bottom-0 bg-gradient-to-r from-[#22386D] to-rgba(21, 21, 21, 0)">
