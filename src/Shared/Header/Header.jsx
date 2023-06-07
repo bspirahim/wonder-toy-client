@@ -41,7 +41,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to='/'>
-                    <img className='h-[50px]' src="/public/wonder-toy-logo.png" alt="" />
+                    <img className='h-[50px]' src="/wonder-toy-logo.png" alt="" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -57,7 +57,7 @@ const Header = () => {
 
                             <div className='flex items-center'>
                                 <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                    <img src={user?.photoURL ? user.photoURL : "/public/photoGallery/profile.png"} className='w-12 mr-4 rounded-full' alt="" />
+                                    <img src={user?.photoURL ? user.photoURL : "/photoGallery/profile.png"} className='w-12 mr-4 rounded-full' alt="" />
                                 </div>
 
                                 <button onClick={handleSignOut} className="btn btn-outline btn-primary px-5">Logout</button>

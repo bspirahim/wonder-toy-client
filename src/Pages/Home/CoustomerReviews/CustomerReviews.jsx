@@ -10,7 +10,7 @@ const CustomerReviews = () => {
                 <div className='md:grid grid-cols-4 gap-4 mt-10'>
                     <div className="card md:w-60 m-5 bg-indigo-100 border-double border-4 border-sky-500 text-center p-4">
                         <div className='text-center'>
-                            <figure><img className='w-12' src="/public/customer/player-1.png" alt="Shoes" /></figure>
+                            <figure><img className='w-12' src="/customer/player-1.png" alt="Shoes" /></figure>
                             <p className='py-2'>Maruf Ahmed</p>
                             <div className='text-center pb-2 '>
                                 <Rating
@@ -26,7 +26,7 @@ const CustomerReviews = () => {
                     </div>
                     <div className="card md:w-60 m-5 bg-indigo-100 border-double border-4 border-sky-500 text-center p-4">
                         <div className='text-center'>
-                            <figure><img className='w-12' src="/public/customer/player-1.png" alt="Shoes" /></figure>
+                            <figure><img className='w-12' src="/customer/player-1.png" alt="Shoes" /></figure>
                             <p className='py-2'>Maruf Ahmed</p>
                             <div className='text-center pb-2 '>
                                 <Rating
@@ -42,7 +42,7 @@ const CustomerReviews = () => {
                     </div>
                     <div className="card md:w-60 m-5 bg-indigo-100 border-double border-4 border-sky-500 text-center p-4">
                         <div className='text-center'>
-                            <figure><img className='w-12' src="/public/customer/player-1.png" alt="Shoes" /></figure>
+                            <figure><img className='w-12' src="/customer/player-1.png" alt="Shoes" /></figure>
                             <p className='py-2'>Maruf Ahmed</p>
                             <div className='text-center pb-2 '>
                                 <Rating
@@ -58,7 +58,7 @@ const CustomerReviews = () => {
                     </div>
                     <div className="card md:w-60 m-5 bg-indigo-100 border-double border-4 border-sky-500 text-center p-4">
                         <div className='text-center'>
-                            <figure><img className='w-12' src="/public/customer/player-1.png" alt="Shoes" /></figure>
+                            <figure><img className='w-12' src="/customer/player-1.png" alt="Shoes" /></figure>
                             <p className='py-2'>Maruf Ahmed</p>
                             <div className='text-center pb-2 '>
                                 <Rating

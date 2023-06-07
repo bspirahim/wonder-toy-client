@@ -44,7 +44,7 @@ const Footer = () => {
                     <Link className='mx-2 text-lg border-b-2' to='addtoy'>Add Toy</Link>
                 </div>
                 <div className=' p-1 rounded-lg'>
-                    <img className='h-[50px]' src="/public/wonder-toy-logo.png" alt="" />
+                    <img className='h-[50px]' src="/wonder-toy-logo.png" alt="" />
                 </div>
             </div>
 

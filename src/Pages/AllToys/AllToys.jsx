@@ -11,7 +11,7 @@ const AllToys = () => {
     return (
         <div className='md:px-20'>
             <div className="relative w-full">
-                <img src='/public/banner/mytoy-banner.jpg' className="w-full" />
+                <img src='/banner/mytoy-banner.jpg' className="w-full" />
                 <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.4)]">
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
                         <h2 className='text-5xl'>Total Toys - {toys.length}</h2>

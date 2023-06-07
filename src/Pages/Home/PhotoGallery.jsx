@@ -18,7 +18,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-1.jpg"
+                            src="/photoGallery/img-1.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -26,7 +26,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-2.jpg"
+                            src="/photoGallery/img-2.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -34,7 +34,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-3.jpg"
+                            src="/photoGallery/img-3.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -42,7 +42,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-4.jpg"
+                            src="/photoGallery/img-4.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -50,7 +50,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-5.jpg"
+                            src="/photoGallery/img-5.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -58,7 +58,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-6.jpg"
+                            src="/photoGallery/img-6.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -66,7 +66,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-7.jpg"
+                            src="/photoGallery/img-7.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -74,7 +74,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-8.jpg"
+                            src="/photoGallery/img-8.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>
@@ -82,7 +82,7 @@ const PhotoGallery = () => {
                 <div class="...">
                     <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                         <img
-                            src="/public/photoGallery/img-9.jpg"
+                            src="/photoGallery/img-9.jpg"
                             class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
                             alt="Louvre" />
                     </div>

@@ -26,14 +26,14 @@ const router = createBrowserRouter([
             {
                 path: '/alltoys',
                 element: <AllToys></AllToys>,
-                loader: () => fetch('http://localhost:5000/altoys')
+                loader: () => fetch('https://wonder-toy-server-one.vercel.app/altoys')
             },
             {
                 path: 'toy/:id',
                 element: <PrivateRoute>
                     <ViewDetails></ViewDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/altoys/${params.id}`)
+                loader: ({ params }) => fetch(`https://wonder-toy-server-one.vercel.app/altoys/${params.id}`)
             },
             {
                 path: '/mytoys',
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path:'/updatetoy/:id',
                 element:<UpdateToy></UpdateToy>,
-                loader:({params}) => fetch(`http://localhost:5000/altoys/${params.id}`)
+                loader:({params}) => fetch(`https://wonder-toy-server-one.vercel.app/altoys/${params.id}`)
             },
             {
                 path: '/addtoy',

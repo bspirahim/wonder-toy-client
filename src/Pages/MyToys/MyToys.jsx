@@ -9,7 +9,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
 
-    const url = `http://localhost:5000/altoys?email=${user?.email}`
+    const url = `https://wonder-toy-server-one.vercel.app/altoys?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const MyToys = () => {
         }).then((result) => {
           if (result.isConfirmed) {
   
-            fetch(`http://localhost:5000/altoys/${_id}`, {
+            fetch(`https://wonder-toy-server-one.vercel.app/altoys/${_id}`, {
               method: 'DELETE'
             })
             .then(res => res.json())
@@ -54,7 +54,7 @@ const MyToys = () => {
     return (
         <div className='md:px-20'>
             <div className="relative w-full">
-                <img src='/public/banner/mytoy-banner.jpg' className="w-full" />
+                <img src='/banner/mytoy-banner.jpg' className="w-full" />
                 <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.4)]">
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
                         <h2 className='text-5xl'>Your Toys - {myToys.length}</h2>

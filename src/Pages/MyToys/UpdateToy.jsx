@@ -35,7 +35,7 @@ const UpdateToy = () => {
             rating
         }
 
-        fetch(`http://localhost:5000/altoys/${_id}`, {
+        fetch(`https://wonder-toy-server-one.vercel.app/altoys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

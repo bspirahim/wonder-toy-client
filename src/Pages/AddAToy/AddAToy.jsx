@@ -34,7 +34,7 @@ const AddAToy = () => {
         }
         console.log(addToy);
 
-        fetch('http://localhost:5000/alltoys', {
+        fetch('https://wonder-toy-server-one.vercel.app/alltoys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

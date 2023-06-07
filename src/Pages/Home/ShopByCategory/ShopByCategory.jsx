@@ -9,14 +9,14 @@ const ShopByCategory = () => {
     const [category, setCategory] = useState([])
 
     const handleCategory = (category) => {
-        fetch(`http://localhost:5000/altoys?category=${category}`)
+        fetch(`https://wonder-toy-server-one.vercel.app/altoys?category=${category}`)
             .then(res => res.json())
             .then(data => setCategory(data))
     }
     console.log(category)
 
     useEffect(() =>{
-        fetch('http://localhost:5000/altoys?category=ethnic')
+        fetch('https://wonder-toy-server-one.vercel.app/altoys?category=ethnic')
             .then(res => res.json())
             .then(data => setCategory(data))
     },[])
