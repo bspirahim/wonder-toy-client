@@ -17,6 +17,7 @@ const MyToys = () => {
 
 
 
+
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete it');
         if (proceed) {

@@ -8,7 +8,6 @@ const AllToys = () => {
     const toys = useLoaderData();
     console.log(toys)
 
-    
     return (
         <div className='md:px-20'>
             <div className="relative w-full">
