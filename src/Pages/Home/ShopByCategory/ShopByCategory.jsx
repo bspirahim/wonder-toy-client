@@ -22,21 +22,21 @@ const ShopByCategory = () => {
     },[])
 
     return (
-        <div data-aos="fade-up" className='md:px-20 my-20'>
+        <div data-aos="fade-up" className='md:px-20 mb-20'>
             <h2 className='text-3xl text-center mb-12 font-bold'>Shop By Category</h2>
             <Tabs className="Tabs">
-                <TabList className='w-2/4 mx-auto flex justify-around'>
-                    <Tab onClick={() => handleCategory('ethnic')}>Ethnic Dolls</Tab>
-                    <Tab onClick={() => handleCategory('reborn')}>Reborn Dolls</Tab>
-                    <Tab onClick={() => handleCategory('baby')}>Baby Dolls</Tab>
+                <TabList className='w-3/4 mx-auto flex justify-around'>
+                    <Tab onClick={() => handleCategory('ethnic')}>Ethnic</Tab>
+                    <Tab onClick={() => handleCategory('reborn')}>Reborn</Tab>
+                    <Tab onClick={() => handleCategory('baby')}>Baby</Tab>
                 </TabList>
                 <TabPanel>
-                    <div className='grid grid-cols-3 gap-4 my-5'>
+                    <div className='md:grid grid-cols-3 gap-4 my-5 p-5'>
                         {
                             category.map(ethnic =>
 
 
-                                <div className="card w-auto bg-base-100 shadow-xl">
+                                <div className="card w-auto bg-base-100 shadow-xl mb-5">
                                     <figure><img src={ethnic.img} className='w-full h-48 object-cover' alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{ethnic.toyName}</h2>
@@ -55,11 +55,11 @@ const ShopByCategory = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-3 gap-4 my-5'>
+                    <div className='md:grid grid-cols-3 gap-4 my-5 p-5'>
                         {
                             category.map(reborn =>
 
-                                <div className="card w-auto bg-base-100 shadow-xl">
+                                <div className="card w-auto bg-base-100 shadow-xl mb-5">
                                     <figure><img src={reborn.img} className='w-full h-48 object-cover' alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{reborn.toyName}</h2>
@@ -76,11 +76,11 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-3 gap-4 my-5'>
+                    <div className='md:grid grid-cols-3 gap-4 my-5 p-5'>
                         {
                             category.map(baby =>
 
-                                <div className="card w-auto bg-base-100 shadow-xl">
+                                <div className="card w-auto bg-base-100 shadow-xl mb-5">
                                     <figure><img src={baby.img} className='w-full h-48 object-cover' alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{baby.toyName}</h2>

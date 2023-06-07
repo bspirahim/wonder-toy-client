@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='md:px-20 bg-[#22386D] h-72 text-base-200 '>
-            <div className='flex justify-between py-8 relative'>
+        <div className='md:px-20 bg-[#22386D] md:h-72 text-base-200 '>
+            <div className='md:flex justify-between text-center md:text-start py-8 relative'>
                 <div>
                     <small>We offer a premium service <br /> wheather you are shoping at one of our <br /> flagship stores or via our website!</small>
                     <p className='pt-2'>Kajipara Mirpur, Dhaka 1207</p>
 
                 </div>
 
-                <div>
+                <div className=''>
                     <span className='flex items-center'><FaPhoneAlt className='me-2'></FaPhoneAlt>01716289767</span>
 
                     <span className='flex items-center'><FaPhoneAlt className='me-2'></FaPhoneAlt>telephone- 091500000</span>

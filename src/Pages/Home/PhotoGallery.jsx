@@ -12,7 +12,7 @@ const PhotoGallery = () => {
           });
     },[])
     return (
-        <div data-aos="fade-up" className='md:px-20'>
+        <div data-aos="fade-up" className='md:px-20 mb-20'>
             <h1 className='text-4xl font-bold text-center my-10'>Photo Gallery</h1>
             <div class="grid-cols-3 px-10 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
                 <div class="...">
