@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-import app from '../../firebase/firebase.config';
+import app from '../../../src/firebase/firebase.config';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
