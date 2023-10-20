@@ -32,7 +32,6 @@ const AddAToy = () => {
             rating,
             img
         }
-        console.log(addToy);
 
         fetch('https://wonder-toy-server-one.vercel.app/alltoys', {
             method: 'POST',
