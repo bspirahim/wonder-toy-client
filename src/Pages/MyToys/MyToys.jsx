@@ -57,13 +57,13 @@ const MyToys = () => {
                 <img src='/banner/mytoy-banner.jpg' className="w-full" />
                 <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.4)]">
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
-                        <h2 className='text-5xl'>Your Toys - {myToys.length}</h2>
+                        <h2 className='md:text-5xl'>Your Toys - {myToys.length}</h2>
                     </div>
                 </div>
             </div>
 
 
-            <div className="overflow-x-auto w-full my-12">
+            <div className="overflow-x-auto w-full md:my-12">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
