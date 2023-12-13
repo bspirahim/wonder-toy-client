@@ -9,7 +9,7 @@ const ViewDetails = () => {
 
 
     return (
-        <div className=''>
+        <div className='max-w-screen-lg mx-auto'>
             <div className="relative w-full">
                 <img src='/banner/mytoy-banner.jpg' className="w-full" />
                 <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.4)]">
@@ -19,7 +19,7 @@ const ViewDetails = () => {
                 </div>
             </div>
 
-            <div className='max-w-screen-lg mx-auto md:my-12'>
+            <div className=' md:my-12'>
                 <div className="grid md:grid-cols-2 gap-10 lg:card-side bg-base-200 shadow-lg p-4">
                     <div><img src={img}  className='w-full h-auto ' alt="Album" /></div>
                     <div className="w-9/12 my-auto">

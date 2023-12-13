@@ -8,6 +8,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import useTitle from '../../hooks/useTitle';
+import PhotoCard from '../../Shared/PhotoCard/PhotoCard';
 
 
 
@@ -29,6 +30,8 @@ const Home = () => {
             <ShopByCategory data-aos="fade-up"></ShopByCategory>
             <CustomerReviews data-aos="fade-up"></CustomerReviews>
             <NewsLetter></NewsLetter>
+
+            
         </div>
     );
 };

@@ -8,7 +8,6 @@ const Header = () => {
     const navItems = <>
         <li><Link to='/'>Home</Link> </li>
         <li><Link to='alltoys'>All Toys</Link> </li>
-        <li><Link to='blog'>Blog</Link> </li>
         {
             user ? <>
                 <li><Link to='mytoys'>My Toys</Link> </li>
@@ -30,7 +29,7 @@ const Header = () => {
             })
     }
     return (
-        <div className="md:px-20 navbar bg-base-100 shadow-sm">
+        <div className="max-w-screen-lg mx-auto navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

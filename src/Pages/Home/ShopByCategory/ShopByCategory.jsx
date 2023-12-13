@@ -13,7 +13,6 @@ const ShopByCategory = () => {
             .then(res => res.json())
             .then(data => setCategory(data))
     }
-    console.log(category)
 
     useEffect(() =>{
         fetch('https://wonder-toy-server-one.vercel.app/altoys?category=ethnic')
@@ -22,8 +21,11 @@ const ShopByCategory = () => {
     },[])
 
     return (
-        <div data-aos="fade-up" className='md:px-20 mb-20'>
+        <div className='max-w-screen-lg mx-auto mb-20'>
             <h2 className='text-3xl text-center mb-12 font-bold'>Shop By Category</h2>
+            <div className='mb-4'>
+                    <span className="w-12 mx-auto h-1 bg-[#FD3358] inline-block rounded-2xl"></span>
+                </div>
             <Tabs className="Tabs">
                 <TabList className='w-3/4 mx-auto flex justify-around'>
                     <Tab onClick={() => handleCategory('ethnic')}>Ethnic</Tab>
