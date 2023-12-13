@@ -2,9 +2,25 @@ import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import PhotoCard from '../../Shared/PhotoCard/PhotoCard';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const PhotoGallery = () => {
+//     const {id} = useParams()
+//     const [photoIds, setPhotoIds] = useState([]);
 
+//   useEffect(() => {
+//     const fetchPhotoIds = async () => {
+//       try {
+//         const response = await fetch(`https://wonder-toy-server-one.vercel.app/altoys/${_id}`); // Replace with your actual endpoint
+//         const data = await response.json();
+//         setPhotoIds(data.photoIds);
+//       } catch (error) {
+//         console.error('Error fetching photo IDs:', error);
+//       }
+//     };
+
+//     fetchPhotoIds();
+//   }, []); 
     
 
 
@@ -35,8 +51,8 @@ const PhotoGallery = () => {
 
                 <div className="grid gap-4">
 
-                    <div data-aos="fade-right">
                         <div data-aos="fade-right">
+                        {/* <PhotoCard photoIds={id} /> */}
                             <div className='w-full h-fit group'>
                                 <div className='relative overflow-hidden'>
                                     <img class="h-auto max-w-full rounded-lg" src='https://img.freepik.com/premium-photo/knitted-stuffed-toys-amigurumi-handcrafted-crochet-hobby_637279-1401.jpg?size=626&ext=jpg&ga=GA1.1.1198683788.1701365080&semt=ais' alt="" />
@@ -46,7 +62,6 @@ const PhotoGallery = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
 
@@ -105,5 +120,4 @@ const PhotoGallery = () => {
 
     );
 };
-
 export default PhotoGallery;

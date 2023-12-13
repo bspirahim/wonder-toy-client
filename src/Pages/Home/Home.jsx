@@ -28,8 +28,10 @@ const Home = () => {
             <Banner></Banner>
             <PhotoGallery></PhotoGallery>
             <ShopByCategory data-aos="fade-up"></ShopByCategory>
+            <PhotoCard></PhotoCard>
             <CustomerReviews data-aos="fade-up"></CustomerReviews>
             <NewsLetter></NewsLetter>
+
 
             
         </div>

@@ -9,7 +9,7 @@ const ViewDetails = () => {
 
 
     return (
-        <div className='max-w-screen-lg mx-auto'>
+        <div className='max-w-screen-lg mx-auto '>
             <div className="relative w-full">
                 <img src='/banner/mytoy-banner.jpg' className="w-full" />
                 <div className="absolute w-full h-full flex items-center left-0 bottom-0 bg-[rgba(0,0,0,0.4)]">
