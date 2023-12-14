@@ -14,6 +14,7 @@ const AddAToy = () => {
         const sellerName = form.sellerName.value;
         const email = form.email.value;
         const toyName = form.toyName.value;
+        const title = form.title.value;
         const category = form.category.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
@@ -25,12 +26,14 @@ const AddAToy = () => {
             sellerName: sellerName,
             email,
             toyName: toyName,
+            title,
             category: category,
             price: price,
             quantity: quantity,
             details,
             rating,
-            img
+            img,
+
         }
 
         fetch('https://wonder-toy-server-one.vercel.app/alltoys', {
@@ -49,7 +52,7 @@ const AddAToy = () => {
                         title: 'Success',
                         text: 'Successfully added',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Done'
                       })
                     form.reset();
                 }
@@ -83,6 +86,12 @@ const AddAToy = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
+                            <span className="label-text">Title</span>
+                        </label>
+                        <input type="text" name='title' className="input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
                             <span className="label-text">Sub-Category</span>
                         </label>
                         <select name='category' className="input input-bordered" required>
@@ -90,6 +99,9 @@ const AddAToy = () => {
                             <option value="ethnic">Ethnic Dolls</option>
                             <option value="reborn">Reborn Dolls</option>
                             <option value="baby">Baby Dolls</option>
+                            <option value="teddy">Tedday bear</option>
+                            <option value="barbie">Barbie Dolls</option>
+                            <option value="haunted">Haunted Dolls</option>
                         </select>
                     </div>
                     <div className="form-control">
@@ -116,12 +128,12 @@ const AddAToy = () => {
                         </label>
                         <input type="text" name='photo' className="input input-bordered" required />
                     </div>
-                </div>
-                <div className="form-control">
+                    <div className="form-control">
                     <label className="label">
                         <span className="label-text">Detail Description</span>
                     </label>
                     <textarea type="text" name='details' className="input input-bordered" required />
+                </div>
                 </div>
                 <div className="form-control mt-6">
                     <input type="submit" className='btn btn-primary' value="Add Toy" />
