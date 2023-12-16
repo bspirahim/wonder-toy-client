@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Header = () => {
     const { user, signOutUser } = useContext(AuthContext);
     const navItems = <>
-        <li><Link to='/'>Home</Link> </li>
-        <li><Link to='alltoys'>All Toys</Link> </li>
+        <Link className='mx-2 text-black bg-gray-300/70 py-2 px-3 rounded-tl-lg rounded-br-lg hover:bg-primary/90 hover:text-white transition duration-700 uppercase' to='/'>Home</Link>
+        <Link className='mx-2 text-black bg-gray-300/70 py-2 px-3 rounded-tl-lg rounded-br-lg hover:bg-primary/90 hover:text-white transition duration-700 uppercase' to='alltoys'>All Toys</Link>
         {
             user ? <>
-                <li><Link to='mytoys'>My Toys</Link> </li>
-                <li><Link to='addtoy'>Add A Toy</Link> </li>
+                <Link className='mx-2 text-black bg-gray-300/70 py-2 px-3 rounded-tl-lg rounded-br-lg hover:bg-primary/90 hover:text-white transition duration-700 uppercase' to='mytoys'>My Toys</Link>
+
+                <Link className='mx-2 text-black bg-gray-300/80 py-2 px-3 rounded-tl-lg rounded-br-lg hover:bg-primary/90 hover:text-white transition duration-700 uppercase' to='addtoy'>Add A Toy</Link>
             </>
                 : ''
 
@@ -59,13 +60,13 @@ const Header = () => {
                                     <img src={user?.photoURL ? user.photoURL : "/photoGallery/profile.png"} className='w-12 mr-4 rounded-full' alt="" />
                                 </div>
 
-                                <button onClick={handleSignOut} className="btn btn-outline btn-primary px-5">Logout</button>
+                                <button onClick={handleSignOut} className="bg-primary/90 uppercase rounded-tl-lg rounded-br-lg text-white py-2 px-3 cursor-pointer text-lg ">Logout</button>
                             </div>
 
                         </>
                         :
                         <Link to='login'>
-                            <button className="btn btn-outline btn-primary px-5">Login</button>
+                            <button className='bg-primary/90 uppercase rounded-tl-lg rounded-br-lg text-white py-2 px-3 cursor-pointer text-lg ' >Login</button>
                         </Link>
                 }
             </div>

@@ -14,7 +14,7 @@ const Banner = () => {
                     <div className='text-white md:w-2/4 mx-auto text-center md:space-y-7 '>
                         <h2 className=' md:text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
                         <p className=' md:w-3/4 mx-auto hidden md:block'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
-                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                        <button className='button-tab bg-primary/90 rounded-tl-lg rounded-br-lg text-white py-2 px-3 cursor-pointer text-lg uppercase' >Browse</button>
                         
                     </div>
                     <a href="#slide2" className="text-4xl pe-4">❯</a>
@@ -27,7 +27,7 @@ const Banner = () => {
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
                         <h2 className='md:text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
                         <p className='w-3/4 mx-auto hidden md:block'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
-                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                        <button className='button-tab bg-primary/90 rounded-tl-lg rounded-br-lg text-white py-2 px-3 cursor-pointer text-lg ' >Browse</button>
                     </div>
                     <a href="#slide3" className="text-4xl pe-4">❯</a>
                 </div>
@@ -39,7 +39,7 @@ const Banner = () => {
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
                         <h2 className='md:text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
                         <p className='w-3/4 mx-auto hidden md:block'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
-                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                        <button className='button-tab bg-primary/90 rounded-tl-lg rounded-br-lg text-white py-2 px-3 cursor-pointer text-lg ' >Browse</button>
                     </div>
                     <a href="#slide4" className="text-4xl pe-4">❯</a>
                 </div>
@@ -51,7 +51,7 @@ const Banner = () => {
                     <div className='text-white w-2/4 mx-auto text-center space-y-7 '>
                         <h2 className='md:text-5xl'>Sort Teddy Bear Toys <br /> For Kids</h2>
                         <p className='w-3/4 mx-auto hidden md:block'>Discover a delightful collection of teddy bear toys for kids on our website. Browse, choose, and sort through a wide variety of cuddly companions. Perfect for playtime and bedtime!</p>
-                        <button className="btn btn-accent px-8 text-white text-lg rounded-full">Browse</button>
+                        <button className='button-tab bg-primary/90 rounded-tl-lg rounded-br-lg text-white py-2 px-3 cursor-pointer text-lg ' >Browse</button>
                     </div>
                     <a href="#slide1" className="text-4xl pe-4">❯</a>
                 </div>

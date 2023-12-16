@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import useTitle from '../../hooks/useTitle';
 import PhotoCard from '../../Shared/PhotoCard/PhotoCard';
+import Offer from './Offer/Offer';
 
 
 
@@ -28,7 +29,7 @@ const Home = () => {
             <Banner></Banner>
             <PhotoGallery></PhotoGallery>
             <ShopByCategory data-aos="fade-up"></ShopByCategory>
-            <PhotoCard></PhotoCard>
+            <Offer></Offer>
             <CustomerReviews data-aos="fade-up"></CustomerReviews>
             <NewsLetter></NewsLetter>
 

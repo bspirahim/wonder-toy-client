@@ -42,12 +42,12 @@ const ShopByCategory = () => {
             </div>
             <Tabs className="Tabs">
                 <TabList className='w-3/4 mx-auto flex justify-around'>
-                    <Tab className='button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('teddy')}>Teddy</Tab>
-                    <Tab className='button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('reborn')}>Reborn</Tab>
-                    <Tab className='button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('baby')}>Baby</Tab>
-                    <Tab className='button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('ethnic')}>Ethnic</Tab>
-                    <Tab className='button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('barbie')}>Barbie</Tab>
-                    <Tab className='button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('haunted')}>Haunted</Tab>
+                    <Tab className='uppercase button-tab  bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('teddy')}>Teddy</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('reborn')}>Reborn</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('baby')}>Baby</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('ethnic')}>Ethnic</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('barbie')}>Barbie</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('haunted')}>Haunted</Tab>
                 </TabList>
                 <TabPanel>
                     <div data-aos="fade-right"  className='grid grid-cols-4 gap-4 my-5 p-5'>
@@ -112,7 +112,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-left"  className='md:grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='md:grid grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(baby =>
 
@@ -143,7 +143,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-right"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='grid grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(teddy =>
                                 
@@ -176,7 +176,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-right"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='grid grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(barbie =>
                                 
@@ -209,7 +209,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-right"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-left"  className='grid grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(haunted =>
                                 
