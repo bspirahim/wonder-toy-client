@@ -12,12 +12,20 @@ const Offer = () => {
         });
     }, [])
     return (
-        <div className="relative bg-center bg-cover h-[90vh] bg-fixed bg-no-repeat "
+        <div className="relative bg-center bg-cover h-[80vh] bg-fixed bg-no-repeat "
             style={{ backgroundImage: 'url("../../../../public/banner/offer-bg-2.jpg")' }}>
-            <div dir="ltr" className=' absolute w-full h-full flex items-center  bg-[rgba(0,0,0,0.20)] border-red-50 border-2'>
-                <div className='text-white md:w-2/4 mx-auto text-center md:space-y-7 me-8'>
-                    <p className='text-5xl font-semibold'>If You are New User and <br /> It is Your First Order</p>
-                    <button className='uppercase button-tab rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer bg-[#FFBB5A]'>Order Now</button>
+            <div className=' absolute w-full h-full flex items-center  bg-[rgba(0,0,0,0.20)]'>
+                <div className='max-w-screen-lg mx-auto'>
+                   <div className='w-1/4 ms-auto'>
+                   <div  data-aos="flip-up" className=" w-96 shadow-xl border border-rose-300 rounded-tl-3xl rounded-br-3xl">
+                        <div className="card-body items-center text-center">
+                            <p className='text-white font-semibold text-xl'>If You are New User and It is Your First Order </p>
+                            <div className="card-actions">
+                                <button className="uppercase button-tab  bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mt-4">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
                 </div>
             </div>
         </div>

@@ -2,14 +2,14 @@ import React from 'react';
 import Banner from './Banner';
 import PhotoGallery from './PhotoGallery';
 import ShopByCategory from './ShopByCategory/ShopByCategory';
-import CustomerReviews from './CoustomerReviews/CustomerReviews';
 import NewsLetter from './NewsLetter/NewsLetter';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import useTitle from '../../hooks/useTitle';
-import PhotoCard from '../../Shared/PhotoCard/PhotoCard';
 import Offer from './Offer/Offer';
+import Faq from './Faq/Faq';
+import Testimonial from './Testimonial/Testimonial';
 
 
 
@@ -30,7 +30,8 @@ const Home = () => {
             <PhotoGallery></PhotoGallery>
             <ShopByCategory data-aos="fade-up"></ShopByCategory>
             <Offer></Offer>
-            <CustomerReviews data-aos="fade-up"></CustomerReviews>
+            <Faq></Faq>
+            <Testimonial></Testimonial>
             <NewsLetter></NewsLetter>
 
 
