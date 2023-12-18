@@ -1,23 +1,21 @@
 import React from 'react';
 import Aos from 'aos';
+import './Newslatter.css'
 
 const NewsLetter = () => {
     return (
-        <div data-aos="fade-up" className='md:px-20 p-5'>
-            <div className=" relative w-full">
-                <img src='/banner/bg-3.jpg' className="w-full rounded-lg" />
-                <div className="absolute rounded-xl  h-full flex items-center left-0 bottom-0 bg-gradient-to-r from-[#22386D] to-rgba(21, 21, 21, 0)">
-                    <div className='text-base-700 text-start text-white  md:space-y-4  p-5 py-5'>
-                        <h2 className='md:text-4xl'>Subscribe Newsletter</h2>
-                        <p className='py-1'>Get the latest Toy trend on your inbox!</p>
-                        <div className="form-control ">
+        <div className="gradient-animation py-12">
+            <div className='max-w-screen-lg mx-auto'>
+            <div className='w-3/4 mx-auto text-center text-white  md:space-y-4 py-10 gradient-animation drop-shadow-2xl shadow-5xl p-2'>
+                        <h2 className='md:text-2xl'>Subscribe Newsletter</h2>
+                        <p className='py-1 text-xl'>Get the latest Toy trend on your inbox!</p>
+                        <div className="form-control w-3/4 mx-auto">
                             <label className="input-group">
-                                <input type="text" placeholder="info@site.com" className="input input-bordered w-full" />
-                                <button className='btn border-0 bg-primary'>Subscribe</button>
+                                <input type="text" placeholder="info@site.com" className="input input-bordered w-full text-black" />
+                                <button className='btn border-0 bg-[#22386D]'>Subscribe</button>
                             </label>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     );

@@ -34,7 +34,7 @@ const AllToys = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${toy._id}`} className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">View Details</Link>
                                         </div>
                                     </div>
                                 </div>

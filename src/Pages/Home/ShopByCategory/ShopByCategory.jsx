@@ -35,22 +35,26 @@ const ShopByCategory = () => {
     }, [])
 
     return (
-        <div className='max-w-screen-lg mx-auto mb-20'>
-            <h2 className='text-3xl text-center mb-12 font-bold'>Shop By Category</h2>
-            <div className='mb-4'>
-                <span className="w-12 mx-auto h-1 bg-[#FD3358] inline-block rounded-2xl"></span>
+        <div className='max-w-screen-lg mx-auto my-16 text-center'>
+           <div className='flex items-center my-16'>
+                <div className='flex-none'>
+                    <span className="w-1 mx-auto h-12 bg-primary inline-block"></span>
+                </div>
+                <div className='shrink w-2/4 mx-auto'>
+                    <h1 className=' font-bold text-center md:text-2xl'>Shop By Category</h1>
+                </div>
             </div>
             <Tabs className="Tabs">
-                <TabList className='w-3/4 mx-auto flex justify-around'>
-                    <Tab className='uppercase button-tab  bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('teddy')}>Teddy</Tab>
-                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('reborn')}>Reborn</Tab>
-                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('baby')}>Baby</Tab>
-                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('ethnic')}>Ethnic</Tab>
-                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('barbie')}>Barbie</Tab>
-                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer' onClick={() => handleCategory('haunted')}>Haunted</Tab>
+                <TabList className='w-3/4 mx-auto md:flex justify-around'>
+                    <Tab className='uppercase button-tab  bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mb-2 text-center' onClick={() => handleCategory('teddy')}>Teddy</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mb-2 text-center' onClick={() => handleCategory('reborn')}>Reborn</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mb-2 text-center' onClick={() => handleCategory('baby')}>Baby</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mb-2 text-center' onClick={() => handleCategory('ethnic')}>Ethnic</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mb-2 text-center' onClick={() => handleCategory('barbie')}>Barbie</Tab>
+                    <Tab className='uppercase button-tab bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mb-2 text-center' onClick={() => handleCategory('haunted')}>Haunted</Tab>
                 </TabList>
                 <TabPanel>
-                    <div data-aos="fade-right"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-right"  className='grid md:grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(ethnic =>
                             
@@ -72,7 +76,7 @@ const ShopByCategory = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${ethnic._id}`} className="w-full p-1 uppercase bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">View details</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +85,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-up"  className='md:grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='grid md:grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(reborn =>
 
@@ -102,7 +106,7 @@ const ShopByCategory = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${reborn._id}`} className="w-full p-1 uppercase bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">view details</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +116,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-up"  className='md:grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='grid md:grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(baby =>
 
@@ -133,7 +137,7 @@ const ShopByCategory = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${baby._id}`} className="w-full p-1 uppercase bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">view details</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +147,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-up"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='grid md:grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(teddy =>
                                 
@@ -164,7 +168,7 @@ const ShopByCategory = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${teddy._id}`} className="w-full uppercase p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">view details</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +180,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-up"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-up"  className='grid md:grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(barbie =>
                                 
@@ -197,7 +201,7 @@ const ShopByCategory = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${barbie._id}`} className="w-full p-1 uppercase bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">view details</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -209,7 +213,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div data-aos="fade-left"  className='grid grid-cols-4 gap-4 my-5 p-5'>
+                    <div data-aos="fade-left"  className='grid md:grid-cols-4 gap-4 my-5 p-5'>
                         {
                             category.map(haunted =>
                                 
@@ -230,7 +234,7 @@ const ShopByCategory = () => {
                                             ></Rating>
                                         </div>
                                         <div className="card-actions   w-full ">
-                                            <button className="w-full p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">Buy Now</button>
+                                            <Link to={`/toy/${haunted._id}`} className="w-full uppercase p-1 bg-primary rounded-b-md mt-5 text-white hover:bg-[#185b95]">view details</Link>
                                         </div>
                                     </div>
                                 </div>
