@@ -65,7 +65,7 @@ const Faq = () => {
 
                 </div>
                 <div>
-                    <img src="../../../../public/icon/faq-3.jpg" alt="" />
+                    <img src="/icon/faq-3.jpg" alt="" />
                 </div>
             </div>
         </div>
