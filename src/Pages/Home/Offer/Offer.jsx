@@ -21,7 +21,7 @@ const Offer = () => {
                         <div className="card-body items-center text-center">
                             <p className='text-white font-semibold text-xl'>If You are New User and It is Your First Order </p>
                             <div className="card-actions">
-                                <button className="uppercase button-tab  bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mt-4">Buy Now</button>
+                                <button className="uppercase button-tab  bg-primary/70 rounded-tl-lg rounded-br-lg text-white py-2 px-5 cursor-pointer mt-4">Order Now</button>
                             </div>
                         </div>
                     </div>
